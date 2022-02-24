@@ -1,0 +1,317 @@
+* {
+    box-sizing: border-box;
+    padding: 0%;
+    margin: 0%;
+}
+
+:root {
+    --blanco: #ffffff;
+    --oscuro: #212121;
+    --gris: #9b9b9b;
+    --primario: #004B5A;
+    --secundario: #071F41;
+    --terciario: #F6C76F;
+    --cuarto: #ED4534;
+    --quinto: #BC342C;
+}
+
+html { 
+    font-size: 62.5%;
+    font-family: 'Krub', sans-serif;
+    scroll-snap-type: y mandatory;
+}
+
+.título, 
+.contacto,
+.formulario {
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+}
+
+body {
+    background-image: linear-gradient(to top, #DFE9F3 0%, var(--blanco) 100%);    
+}
+
+h1 {
+    font-size: 3.8rem;
+}
+
+h2 {
+    font-size: 2.8rem;    
+    margin-bottom: 2rem;
+}
+
+h3 {
+    font-size: 1.8rem;
+}
+
+h1,h2,h3 {
+    text-align: center ;    
+}
+
+a {
+    text-decoration: none;
+}
+
+.título {
+    text-align: center;
+    font-size: 3.8rem;
+    color: var(--terciario);
+}
+
+.título span {
+    font-size: 2rem;
+    color: var(--primario);
+}
+
+.navegacion-principal {    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.sombra {    
+    box-shadow: 0px 2px 18px -2px rgba(0,0,0,0.5);
+    background-color: var(--blanco);
+    padding: 2rem;
+    border-radius: 1rem;    
+}
+
+.navegacion-principal a {
+    padding: 1rem;
+    text-decoration: none;
+    color: var(--blanco);
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.navegacion-principal a:hover {
+    background-color: var(--primario);        
+}
+
+.hero {    
+    position: relative;
+    background-image: url(../Images/digital-marketing-KPIS.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 45rem;
+    min-width: 300px;    
+    margin: 0 0 2rem 0;
+}
+
+.contenido-hero { 
+    position: absolute;    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(000,000,000, .7);
+    width: 100%;
+    height: 100%;    
+}
+
+.contenido-hero h2,
+.contenido-hero p {
+    color: var(--blanco);    
+    font-size: ;        
+}
+
+.contenido-hero div,
+.contenido-hero h2 {
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    margin: 1.5rem auto;    
+    width: min(31rem, 96%);
+}
+
+.contenido-hero span {
+    font-size: 2rem;
+    color: var(--terciario);  
+    margin-left: 1rem;  
+}
+
+.contenido-hero .boton {
+    margin-top: 1.5rem;
+}
+
+.boton {
+    background-color: var(--terciario);
+    color: var(--blanco);
+    padding: 1rem 3rem;
+    /* margin-top: 3rem; */
+    font-size: 2rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    border-radius: .5rem;
+    width: 80%;
+    text-align: center;
+    border: none;
+}
+
+.w-sm-100 {
+    width: 100%;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+    height: auto;
+    width: auto;
+}
+
+.align-right {
+    justify-content: flex-end;
+}
+
+.boton:hover {
+    cursor: pointer;
+} 
+
+.nav-bg {    
+    background-color: var(--quinto);
+}
+
+body .fixed-margins {
+    margin: 0 .5rem 2rem .5rem; 
+}
+ 
+.contenedor {
+    max-width: 120rem;   
+    margin: auto;
+}
+
+@media (min-width: 480px) {
+    .boton {
+        width: auto;
+    }
+
+    .contenido-hero div,
+    .contenido-hero h2 {   
+        width: auto;
+    }
+}
+
+.servicios {
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    row-gap: 4rem;  
+    margin-bottom: 2rem;
+}
+
+.servicio {
+    min-height: 27rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.servicio h3 {
+    color: var(--quinto);
+    font-weight: 400;
+}
+
+.servicio p {
+    line-height: 2;
+    text-align: center;
+}
+
+.servicio .icono {
+    min-height: 15rem;
+    width: 15rem;
+    background-color: var(--primario);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.formulario {
+    background-color: var(--gris);
+    width: min(60rem, 100%);
+    margin: 0 auto;
+    padding: 2rem;
+    border-radius: 1rem;
+}
+
+.formulario fieldset {
+    border: none;
+}
+
+.formulario legend {
+    text-align: center;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    color: var(--terciario);
+}
+
+.campo {
+    margin-bottom: 1rem;
+}
+
+.campo span {
+    color: var(--blanco);
+    font-weight: bold;
+    margin-bottom: .5rem;
+    display: block;
+}
+
+.campo textarea {
+    height: 20rem;
+}
+
+.input-text {
+    width: 100%;
+    border: none;
+    padding: 1.5rem;
+    border-radius: .5rem;
+}
+
+.footer {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+@media (min-width: 768px) {
+    .navegacion-principal {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    body .fixed-margins {
+        margin: 0 auto 2rem auto; 
+    }
+
+    .servicios {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        column-gap: 4rem;  
+        grid-template-rows: 100%;
+    }
+
+    .w-sm-100 {
+        width: auto;
+    }
+
+    .contenedor-campos {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 1rem;
+        grid-template-rows: repeat(3, auto);
+    }
+
+    .campo:nth-child(3), 
+    .campo:nth-child(4) {
+        grid-column: 1/3;
+    }
+
+    .contenido-hero span {
+        font-size: 2rem;
+        color: var(--terciario);
+        margin-left: 1rem;
+    }   
+}
